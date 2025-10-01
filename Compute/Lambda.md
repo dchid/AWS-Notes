@@ -113,6 +113,6 @@ In order to have cross account EFS mounting, VPC peering is required
 - In addition to CloudWatch logs and and metrics, Lambda can also be integrated with X-Ray for tracing
 - To enable the X-Ray Daemon, configure Lambda functions with Active Tracing
 - X-Ray requires 3 environment variables for use in lambda:
-    - `_X_AMZN_T RACE_ID`: Contains the trading header
+    - `_X_AMZN_TRACE_ID`: Contains the trading header
     - `AWS_XRAY_CONTEXT_MISSING`: By default, `LOG_ERROR`
     - `AWS_XRAY_DAEMON_ADDRESS`: The X-Ray Daemon `IP_ADDRESS:PORT`
