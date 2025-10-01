@@ -63,6 +63,20 @@
 - Lambda includes up to 10GB of temporary storage in the /tmp directory
 - *Lambda Execution Context* is a temporary runtime environment used to resolve dependencies and initialize connections
 - Execution Context includes the /tmp directory
+- Lambda can mount EFS (NFS) volumes if they are stored in a VPC
+    - The file system is accessed using EFS access points
+
+### Storage Options
+
+| - | Ephemeral Storage | Lambda Layers | S3 | EFS |
+| --- | --- | --- | --- | --- |
+| **Max Size** | 10,240 MB | 5 layers per function (250 MB max) | Elastic | Elastic |
+| **Persistent** | No | Yes | Yes | Yes |
+| **Content** | Dynamic | Static | Static | Dynamic |
+| **Type** | File System | Archive | Object | File System |
+| **Operations supported** | any | immutable | Atomic with versioning | any |
+| **Cost** | Included in lambda | Included in lambda | Storage, Requests, Data Transfers | Storage, Data Transfers, Throughput |
+| **Sharing/Permissions** | Function Only | IAM | IAM | IAM, NFS |
 
 ## Concurrency
 
