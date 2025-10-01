@@ -1,0 +1,47 @@
+# Lambda
+
+- Lambda are serverless functions which run on demand
+- CPU power is scaled by RAM
+- At 1792MB of RAM, multi-core CPUs are enabled
+- Function timeouts range between 3 seconds and 15 minutes
+- Lambda receives events in JSON format
+- In addition to CloudWatch logs and and metrics, Lambda can also be integrated with X-Ray for tracing
+  - configure Lambda functions with Active Tracing yo enable the X-Ray Daemon
+  - Use the X-Ray SDK in code
+  - X-Ray requires 3 environment variables:
+    - \_X\_AMZN\_T RACE\_ID: Contains the trading header
+    - AWS\_XRAY\_CONTEXT\_MISSING: By default, LOG\_ERROR
+    - AWS\_XRAY\_DAEMON\_ADDRESS: The X-Ray Daemon IP\_ADDRESS:PORT
+- The following langauges are supported:
+  - NodeJS
+  - Python
+  - Java
+  - C#
+  - Golang
+  - Ruby
+- Lambda functions can be triggered using EventBridge or chron jobs
+- Lambda functions get permissions from _Execution Roles_ which have IAM policies attached
+- An IAM principle can access lambda if:
+  - The IAM policy attached to the principle authorizes it (user access)
+  - The resource based policy authorizes it (service access)
+- Lambda includes up to 10GB of temporary storage in the /tmp directory
+- _Lambda Execution Context_ is a temporary runtime environment used to resolve dependencies and initialize connections
+- Execution Context includes the /tmp directory
+- Lambda can have up to 1000 concurrent invocations per account
+- The maximum number of concurrent calls can be limited by setting a _reserved concurrency_
+- If a concurrency limit is triggered, it will return an HTTP 429 for synchronous invocations and retry automatically and the go to the Dead Letter Queue (DLQ) for asynchronous invocations
+- Cold Starts are when higher latency occurs as a result of code outside the handler
+- _Provisioned Concurrency_ can be used to avoid cold starts by allocating concurrency in before invocation
+- Application Auto Scaling can be used to manage concurrency
+- Lambda Metrics include:
+  - Invocations
+  - Duration
+  - Error Count
+  - Concurrent Executions
+  - Iterator Age (Kinesis and DynamoDB streams)
+  - Async Event Age
+  - Async delivery errors
+- CloudWatch Logs Insights allows querying of CloudWatch Logs
+- Lambda Insights can collect, aggregate and summarize system level metrics and diagnostic information
+- Lambda Insights must be included as a layer to be used
+

@@ -1,0 +1,36 @@
+# Autoscaling
+
+- Autoscaling groups automate horizontal scaling
+- ASGs have a minimum, desired, and maximum capacity
+- LBs can forward health checks to ASGs which can then replace unhealthy instances
+- ASGs use a launch template containing:
+  - AMI and instance type
+  - EC2 user data
+  - EBS Volumes
+  - Security Groups
+  - SSH heys
+  - IAN roles for instances
+  - Network and subnet information
+  - Load Balancer information
+- Launch templates are newer compared to launch configurations, which did not support versioning
+- ASGs use scaling policies based on CloudWatch metrics and alarms
+- There are two types of scaling policies, Dynamic and
+- Dynamic autoscaling policies have three sub types:
+  - Target Tracking Scaling is the easiest to set up and is based on average usage
+  - Simple/Step Scaling is based on CloudWatch alarms
+  - Scheduled Actions anticipates scaling based on known usage patterns
+- Predictive Scaling creates predictive models over time using ML models
+- During a cool down period (default 300 seconds) the ASG won't terminate or launch instanes
+- ASG Lifecycle Hooks allow running start-up or shutdown scripts for instances in between pending and in-service states
+- Lifecycle Hooks integrate with EventBridge, SNS, and SQS
+- ASG have three health checks available:
+  - EC2 Status Checks
+  - ELB Health Checks
+  - Custom Health Checks (send instances health using CLI or SDK)
+- Autoscaling CLI can use the `set-instance-health` option for custom health checks or `terminate-instance-in-autoscaling-group` to terminate instances
+- CloudWatch metrics for ASG are collected every minute and they include:
+  - ASG level metrics (opt in):
+    - Min, Max, desired capacity
+    - In-service, pending, stand-by instances
+    - GroupTerminatingInstances, GroupTotalnstances
+  - EC2 level metrics (enabled and collected at either 1 or 5 minute intervals)
