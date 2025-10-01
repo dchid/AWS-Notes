@@ -65,6 +65,7 @@
 - Execution Context includes the /tmp directory
 - Lambda can mount EFS (NFS) volumes if they are stored in a VPC
     - The file system is accessed using EFS access points
+In order to have cross account EFS mounting, VPC peering is required
 
 ### Storage Options
 
