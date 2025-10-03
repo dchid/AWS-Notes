@@ -1,5 +1,7 @@
 # Autoscaling
 
+---
+
 - Autoscaling groups automate horizontal scaling
 - ASGs have a minimum, desired, and maximum capacity
 - LBs can forward health checks to ASGs which can then replace unhealthy instances
