@@ -108,7 +108,7 @@ In order to have cross account EFS mounting, VPC peering is required
 - Lambda Insights can collect, aggregate and summarize system level metrics and diagnostic information
 - Lambda Insights must be included as a layer to be used
 
-# X-Ray Integration
+## X-Ray Integration
 
 - In addition to CloudWatch logs and and metrics, Lambda can also be integrated with X-Ray for tracing
 - To enable the X-Ray Daemon, configure Lambda functions with Active Tracing
@@ -116,3 +116,4 @@ In order to have cross account EFS mounting, VPC peering is required
     - `_X_AMZN_TRACE_ID`: Contains the trading header
     - `AWS_XRAY_CONTEXT_MISSING`: By default, `LOG_ERROR`
     - `AWS_XRAY_DAEMON_ADDRESS`: The X-Ray Daemon `IP_ADDRESS:PORT`
+
