@@ -26,10 +26,6 @@
 - An *ECS Cluster* is a logical grouping of of tasks and services which provide capacity for ECS tasks
 - When using ECS with EC2, a cluster will contain one or more EC2 instances
 
-## ECR
-
-- *Elastic Container Registry* is a registry to store Docker images for ECS clusters
-
 ## Launch Types
 
 - ECS can luanch containers either:
