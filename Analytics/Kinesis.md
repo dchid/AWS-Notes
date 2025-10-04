@@ -41,4 +41,10 @@
 - Default capacity provisioned (4 MB/s or 4000 records per second)
 - Scales automatically based on observed throughput peak during last 30 days
 
+## Managed Service for Apache Flink
 
+- *Flink* is a Java based framework used for processing data streams in real time
+- FLink uses Java, Scala, and SQL
+- Can use either Kinesis Data Streams or Apache Kafka managed on AWS (Amazon MSK)
+- Automatically scales, provisions resources, and manages backups
+- Can get data from Kinesis Data Streams but **no** from Data Firehose
