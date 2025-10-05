@@ -4,6 +4,7 @@
 
 - *Service Quotas* allow alarms to be set when quotas have reached or are nearing their threshold
 - *AWS Health Dashboard* shows health of regions and services for each day and has RSS feed and notifications
+    - EventBridge an be used to take corrective actions
 - *AWS Control Tower* can automate setting up organizations
 - *Cost Explorer* is a tool to visualize and analyze costs over time
     - Can monitor costs by service, hourly resource levels, and forecast costs
