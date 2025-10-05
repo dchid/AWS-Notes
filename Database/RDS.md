@@ -1,5 +1,7 @@
 # RDS
 
+---
+
 - RDS is a managed service for relational SQL databases
 - Engines supported are:
     - PostgreSQL
@@ -33,17 +35,35 @@
 - Can assign priority 0-15 for read replicas for failover
     - If replicas have the same priority, aurora will favor larger
     - If replicas are same priority and same size, aurora will pick randomly for failover
+
+### Metrics
+
 - Sends lag metrics to CloudWatch
-    - AuroraReplicaLag
-    - AuroraReplicaLagMinimum
-    - AuroraReplicaLagMaximum
-    - DatabaseConnections
-    - InsertLatency
+    - `AuroraReplicaLag`
+    - `AuroraReplicaLagMinimum`
+    - `AuroraReplicaLagMaximum`
+    - `DatabaseConnections`
+    - `InsertLatency`
+
+### Auto Scaling
+
+- Aurora replicas can be used for auto scaling
+    - The writer instance is always accessible using the writer endpoint
+    - If the writer endpoint goes down, another instance is promoted to be the writer
+    - The reader endpoint is updated based on the number of read replicas
+
+### Global Aurora
+
+- Aurora supports global databases using two methods:
+    - Aurora cross region read replicas are useful for disaster recover and simple to put in place
+    - Aurora Global Database (recommended) had 1 primary read and write region with up to 10 secondary read only regions (16 replicas per region) with sub 1 second replication lag
 
 ## Read Replicas
 
 - Up to 15 Read replicas can be created for increased read performance
 - Read replicas can work in single AZ, multi AZ, or cross region
+- There is a network cost for cross region read replicas
+- Going from single AZ to multi AZ is a zero downtime operation
 - Read replicas use eventually consistent asynchronous read replication
 - Can be promoted to their own DB
 - RDS Read Replicas are good for analytics
@@ -53,6 +73,10 @@
 ## Availability
 
 - RDS Multi AZ can be used for disaster recovery
+    - Uses synchronous replication
+    - One DNS name with automatic app failover
+    - During failover, the standby instance is promoted to the master
+    - The standby instance is used for disaster recover **not** for scaling
 - Uses Synchronous copying
 - Multi AZ can be used for automatic failover under several conditions:
     - Failed
@@ -70,8 +94,9 @@
     - New DB and old DB are synced
 
 ## Backups and Snapshots
+
 - Backups
-    - Continious
+    - Continuous
     - Allow point in time recovery
     - Occur during maintenance windows
     - When deleting a db instance, automated backups can be retained
@@ -101,6 +126,7 @@
     - This can be used to avoid a `TooManyConnections` exception in Lambda
 
 ## Monitoring
+
 - RDS keeps a record of events such as an instance state going from pending to running
 - Can integrate with SNS and EventBridge
 - Database logs can be sent to CloudWatch
@@ -125,6 +151,7 @@
 - DBLoad is the number of Queries putting load on the db
 
 ## Security
+
 - Supports at rest encryption using KMS
 - Read replicas can't be encrypted if master is not encrypted
 - User snapshot and restore to encrypt an unencrypted db
