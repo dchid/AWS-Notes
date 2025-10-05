@@ -26,6 +26,7 @@
 ## Features
 
 - CloudTrail integrates with EventBridge to intercept API calls
+    - This allows creation of alerts for things such as accidental deletion or changing security groups
 - *Digest Files* contain all log files from previous hour with corresponding SHA-256 hash
     - This can be used to check if logs are tampered with
 - *Organization Trails* are used to log all events for all accounts in an organization
