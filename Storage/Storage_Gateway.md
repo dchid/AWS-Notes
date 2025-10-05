@@ -11,10 +11,12 @@
 - Storage Gateway supports a hardware appliance
 
 ## Types of Storage Gateways
+
 - S3 Storage Gateway
-    - Use s3 bucket as on premise file share
+    - Use S3 bucket as on premise file share
     - Active Directory integration
     - Does not support Glacier
+    - Need to invoke the `RefreshCache` API or use *Automated Cache Refreshing* to get newly uploaded files to S3
 - FSx Storage Gateway
     - Works with FSx for Windows File server
     - Primarily used for caching
