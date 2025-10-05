@@ -92,3 +92,11 @@
 - Instances in warm pools don't effect ASG metrics until they are moved into the ASG
 - An *Instance Reuse Policy* moves instances back into the warm pool during scale in events instead of terminating the instance
 
+## Application Autoscaling
+
+- Monitors your apps and automatically optimizes capacity
+- Point to a selected app and select the services to be scaled
+- Search for resources using CloudFormation Stacks, tags, EC2 ASG
+- Build *Scaling Plans* to automatically add or remove capacity from resources
+- Supports, Target Tracking, Step, and Scheduled Scaling Policies
+
