@@ -1,7 +1,11 @@
 # EC2
 
+---
+
+## Features
+
 - Elastic Compute Cloud (EC2) is a server rental service from AWS
-- EC2 Servers are called _Instances_
+- EC2 Servers are called *Instances*
 - EC2 supports x86 and ARM backed instances
 - Instances have several states:
   - Pending
@@ -42,21 +46,31 @@
 ## Monitoring
 
 - CloudWatch provided metrics for EC2:
-  - _basic monitoring_ with 5 minute intervals by default
-  - can be configured to use _detailed monitoring_ with 1 minute intervals
-  - Monitors CPU, Network, Disk, Status Checks (RAM **not** included)
+    - _basic monitoring_ with 5 minute intervals by default
+    - can be configured to use _detailed monitoring_ with 1 minute intervals
+    - Monitors CPU, Network, Disk, Status Checks (RAM **not** included)
 - Custom metric for EC2:
-  - Can use _basic resolution_ at 1 minute
-  - _High resolution_ can go up to 1 second
-  - Includes RAM and application level metrics
+    - Can use *basic resolution* at 1 minute
+    - *High resolution* can go up to 1 second
+    - Includes RAM and application level metrics
 - CloudWatch Agent forwards metrics and logs from your server to
 - CloudWatch Agent has centralized config using Systems Manager (SSM) parameter store
-- _Procstat plugin_ collect information on individual processes on instance
-  - Monitor by PID or RegEx
-- _Status Checks_ are automated checks to identify issues
-  - _System Status Checks_ monitor problems with AWS hardware that the instance runs on
-  - _Instance Status Checks_ monitor the software and network configurations of the instance
-  - When status checks fail, recovery can be automated using either CloudWatch alarms, or auto scaling groups
+- *Procstat plugin* collect information on individual processes on instance
+    - Monitor by PID or RegEx
+
+### Status Checks
+
+- *Status Checks* are automated checks to identify issues
+- There are three types of status checks
+    - *System Status Checks* monitor problems with AWS hardware that the instance runs on
+    - *Instance Status Checks* monitor the software and network configurations of the instance
+    - *Attached EBS Status Checks* validate that EBS volumes are mounted to instances and can complete I/O operations
+- When status checks fail, recovery can be automated using either CloudWatch alarms, or auto scaling groups
+- Status checks have several CloudWatch metrics
+    - `StatusCheckFailed_System`
+    - `StatusCheckFailed_Instance`
+    - `StatusCheckFailed_AttachedEBS`
+    - `StatusCheckFailed` (for any)
 
 ## Cost
 
