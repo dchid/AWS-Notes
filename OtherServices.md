@@ -1,5 +1,7 @@
 # Other Services
 
+---
+
 - *Service Quotas* allow alarms to be set when quotas have reached or are nearing their threshold
 - *AWS Health Dashboard* shows health of regions and services for each day and has RSS feed and notifications
 - *AWS Control Tower* can automate setting up organizations
