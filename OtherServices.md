@@ -47,6 +47,8 @@
 
 - *Amazon Inspector* automates security assessments on compute resources and sends findings to AWS *Security Hub*
     - Works on EC2, ECS, and Lambda
+    - Requires SSM agent on EC2 and IAM permissions
+    - Accesses CVE database
     - Gives risk score
 - *Amazon Detective* is used to find the root cause of security issues using ML
 - *Amazon Macie* is a fully managed data security and privacy service which uses ML and pattern matching to find personally identifiable information
