@@ -38,7 +38,7 @@
 - A *Configuration Item* is a point in time view of a various attributes of a resource that's created whenever resources are changed
 - *Configuration Recorder* is used to record Configuration Items
 - Configuration Recorders are automatically created when using Config in the console or CLI
-- An *SCP Policy* is placed at the root of an AWS organization to prevent config from getting disabled
+- An *Service Control Policy (SCP)* is placed at the root of an AWS organization to prevent config from getting disabled
 
 ## Conformance Packs
 
