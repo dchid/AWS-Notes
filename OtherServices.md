@@ -22,6 +22,7 @@
     - Recommended to have 3 access nodes
 - *Tag Editor* is used to create and edit tags for AWS resources
 - *QuickSight* is a serverless ML powered service for making interactive dashboards
+- *AWS Glue* is a managed serverless ETL platform
 
 ## AppConfig
 
