@@ -5,7 +5,6 @@
 - *Service Quotas* allow alarms to be set when quotas have reached or are nearing their threshold
 - *AWS Health Dashboard* shows health of regions and services for each day and has RSS feed and notifications
     - EventBridge an be used to take corrective actions
-- *AWS Control Tower* can automate setting up organizations
 - *Cost Explorer* is a tool to visualize and analyze costs over time
     - Can monitor costs by service, hourly resource levels, and forecast costs
 - *AWS Budgets*  can be used to create a budget for an account and setup alarms
@@ -18,13 +17,11 @@
     - Supports cross region and cross account backups
     - Can create policies known as *Backup Plans*
     - *Backup Vault Locks* allow enforcing of Write Once Read Many (WORM) policy
-- *Trusted Advisor* provides an account assessment and high level recommendations
-    - Checks for cost: optimization, performance, security, fault tolerance, and service limits
-    - Trusted advisor has 7 checks on basic and developer support plan: S3 Bucket Permissions, Security Groups, IAM use, MFA on Root Account, EBS Public Snapshots, RDS Public Snapshots, and Service Limits
-    - Full Checks are available on business and enterprise support plans which allow for programmatic access using the AWS Support API
 - *OpenSearch* is a service for Elasticsearch, an open source RESTful analytics engine
     - Managed by *Access Policy*
     - Recommended to have 3 access nodes
+- *Tag Editor* is used to create and edit tags for AWS resources
+- *QuickSight* is a serverless ML powered service for making interactive dashboards
 
 ## AppConfig
 
