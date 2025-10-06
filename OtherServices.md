@@ -45,16 +45,10 @@
 
 ## Security
 
-- *AWS Shield* protects against DDoS attacks
-    - Has free standard tier and paid advanced tier
-- *Web Application Firewall (WAF)* protects web apps from common exploits using web ACLs and other tools
-    - Protects against XSS, DDoS, and SQL injection
 - *Amazon Inspector* automates security assessments on compute resources and sends findings to AWS *Security Hub*
     - Works on EC2, ECS, and Lambda
     - Gives risk score
-- *Amazon GuardDuty* is a machine learning powered threat detection tool which monitors logs
-    - Analyzes Cloudwatch Logs, VPC Logs, DNS Logs
-    - Can protect against CryptoCurrency attacks
+- *Amazon Detective* is used to find the root cause of security issues using ML
 - *Amazon Macie* is a fully managed data security and privacy service which uses ML and pattern matching to find personally identifiable information
 - *CloudHSM* is a physical hardware security module used to store encryption keys so that they are fulling stored and managed by the customer
     - Supports integration with Redshift
