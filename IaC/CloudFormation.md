@@ -244,3 +244,4 @@
 - StackSets can check for drift on each stack in the StackSet
 - If stacks within a StackSet are updated individually, this is not considered drift (Although this is not best practice)
 - When stacks drift either the stack can be updated to reflect the drift, or the resource can be updated back to what the stack defines
+- CloudFormation does **not** support drift detection for custom resources.
