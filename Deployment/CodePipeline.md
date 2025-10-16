@@ -5,11 +5,13 @@
     1. Source *(using CodeCommit, ECR, 3rd party version control)*
     2. Build *(using CodeBuild or 3rd party tools like Jenkins)*
     3. Test *(using CodeBuild, AWS Device farm, 3rd party testing tools)*
-    4. Approval *(if manual approval is required)
-    5. Deploy *(using CodeDeploy, Elastic Beanstalk, CloudFormation, ECS, S3)*
+    4. Approval *(if manual approval is required)*
+    5. Deploy (using CodeDeploy, Elastic Beanstalk, CloudFormation, ECS, S3)
     6. Invoke *(using AWS Lambda or Step Functions)*
 - Pipelines are separated into stages and stages are separated into action groups
-- Pipeline stages create *artifacts which are stored in an S3 bucket to be passed on to the subsequent stages
+- Pipeline stages create *artifacts* which are stored in an S3 bucket to be passed on to the subsequent stages
+    - input bucket must have versioning activated to work with CodePipeline
+    - A customer managed KMS key is required for cross account deployments
 - Stages can execute actions sequentially or in parallel
 - Manual approval can be defined at any stage
 - EventBridge can be used to trigger notifications upon a stage or build failing or being canceled
