@@ -7,7 +7,6 @@
 - Can be used to expose HTTP endpoints in the backend
 - Supports WebSocket and HTTPS protocols
 
-
 ## Deployment
 
 ### Deployment Stages
@@ -32,6 +31,16 @@
     - *Edge-Optimised* (default) is accessible globally from every CloudFront Edge locations
     - *Regional* exposes endpoints within a single region
     - *Private* is accessible only within a VPC
+
+## Mapping
+
+- *Mapping Templates* can are JSON documents used to transform resquest and response data
+- Mapping templates can be used to:
+    - Perform many to one parameter mappings
+    - Override parameters after standard API Gateway mappings have been applied
+    - Conditionally map parameters based on body content or other parameter values
+    - Programmatically create new parameters
+    - Override status codes returned by your integration endpoint
 
 ## Cashing
 
