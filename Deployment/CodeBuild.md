@@ -41,10 +41,11 @@
 
 ## Environment Variables
 - Default environment variables are provides and defined by AWS:
-    - AWS\_DEFAULT\_REGION
-    - CODEBUILD\_BUILD\_ARN
-    - CODEBUILD\_BUILD\_ID 
-    - CODEBUILD\_BUILD\_IMAGE
+    - `AWS_DEFAULT_REGION`
+    - `CODEBUILD_BUILD_ARN`
+    - `CODEBUILD_BUILD_ID`
+    - `CODEBUILD_BUILD_IMAGE`
+    - `CODEBUILD_SOURCE_VERSION`
 - Custom environment variables are user defined
     - Static variables are defined at build time, but can be overridden using a start-build API call
     - Dynamic variables are defined using SSM Parameter Store or Secrets Manager
