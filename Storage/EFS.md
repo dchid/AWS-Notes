@@ -3,7 +3,7 @@
 - Elastic File System EFS is a managed file system for mounting NFS drives on Linux servers
 - EFS drives require security groups
 - EFS has several features:
-    - Multi AZ support
+    - Multi AZ support (multi region requires VPC peering)
     - Scales capacity automatically
     - Supports encryption with KMS
     - Supports moving files between storage tiers through lifecycle policy
