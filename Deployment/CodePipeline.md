@@ -26,8 +26,8 @@
 
 - CloudFormation can be used as a deploy action to deploye resources in CodePipeline
 - Works with CloudFormation StackSets to deploy across multiple accounts/regions
-- Use CREATE_UPDATE action mode to create or update an exiting stack
-- Use DELETE_ONLY action mode to delete test infrastructure
+- Use `CREATE_UPDATE` action mode to create or update an exiting stack
+- Use `DELETE_ONLY` action mode to delete test infrastructure
 - Template parameters can be overridden in the JSON document
 
 ## Best Practices
@@ -39,3 +39,5 @@
 - Pipeline functionality can be extended using Invoke actions
 - Pipeline actions can be in different regions
 - S3 artifact stores must be defined in each region where artifacts are being stored
+- The canary testing option supports Lambda and ECS, but not EC2
+    - To use canary testing on EC2, create a separate deployment group for canary testing
