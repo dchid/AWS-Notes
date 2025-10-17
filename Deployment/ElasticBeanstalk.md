@@ -39,11 +39,11 @@
     - *Blue Green*: Create a new environment and switch over
     - *Traffic Splitting*: Send a small percentage to the new deployment (Canary Testing)
 
-| Deployment Type | Deployment Time | Downtime | Cost | Deployed Instances | Impact of Deployment Failure |
-|-----------------|-----------------|----------|------|--------------------|------------------------------|
-| All at Once     | Lowest          | Some     | $    | Existing           | Downtime                     |
-| Rolling         | Medium          | None     | $$   | Existing           | Single batch out of service  |
-| Rolling Batches | High            | None     | $$$  | New and Existing   | Minimal if first batch fails |
-| Immutable       | Highest         | None     | $$$$ | New                | Minimal                      |
-| Blue Green      | Highest         | None     | $$$$ | New                | New version traffic impacted |
-| Traffic Split   | Highest         | None     | $$$$ | New                | Minimal                      |
+| Deployment Type | Deployment Time | Cost | Deployed Instances | Impact of Deployment Failure |
+|-----------------|-----------------|------|--------------------|------------------------------|
+| All at Once     | Lowest          | $    | Existing           | Downtime                     |
+| Rolling         | Medium          | $$   | Existing           | Single batch out of service  |
+| Rolling Batches | High            | $$$  | New and Existing   | Minimal if first batch fails |
+| Immutable       | Highest         | $$$$ | New                | Minimal                      |
+| Blue Green      | Highest         | $$$$ | New                | New version traffic impacted |
+| Traffic Split   | Highest         | $$$$ | New                | Minimal                      |
