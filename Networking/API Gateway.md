@@ -34,13 +34,14 @@
 
 ## Mapping
 
-- *Mapping Templates* can are JSON documents used to transform resquest and response data
+- *Mapping Templates* can are scripts used to transform resquest and response data
 - Mapping templates can be used to:
     - Perform many to one parameter mappings
     - Override parameters after standard API Gateway mappings have been applied
     - Conditionally map parameters based on body content or other parameter values
     - Programmatically create new parameters
     - Override status codes returned by your integration endpoint
+- Mapping templates are written in [Velocity Template Language (VTL)](https://velocity.apache.org/engine/devel/vtl-reference.html)
 
 ## Cashing
 
