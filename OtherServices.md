@@ -22,6 +22,7 @@
     - Recommended to have 3 access nodes
 - *Tag Editor* is used to create and edit tags for AWS resources
 - *QuickSight* is a serverless ML powered service for making interactive dashboards
+- *OpsWorks* is a configuration management service which provides managed instances id Chef and Puppet. 
 
 ## AppConfig
 
