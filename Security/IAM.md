@@ -10,8 +10,10 @@
 - *IAM Roles* are sets of permissions defined by the IAM Policies attached them which can then be assumed by users
 - *IAM Credentials Report* is a report generated at an account level which summarized users and their credentials
 - *IAM Access Advisor* shows what permissions a user has and when they were last used
-- *IAM Access Analyzer* us used to find out which resources are shared externally
-    - Works by defining a zone of trust
+- *IAM Access Analyzer* is used to find out which resources are shared internally and externally
+    - Used to enforce least privilege
+    - Creates analyzers to get findings
+    - Works by defining a zone of trust (such as an AWS account)
 
 ## IAM Identity Center
 

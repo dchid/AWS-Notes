@@ -18,6 +18,7 @@
   - Spread traffic across multiple Availability Zones
   - Separate public and private traffic
 - ELB is an AWS managed service
+- Has access logs to view detailed information about requests sent to the ELB
 
 ## Health Checks
 
