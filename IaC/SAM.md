@@ -4,7 +4,7 @@
 - SAM generstes complext CloudFormation scripts from simple YAML files
 - SAM can run Lambda, API Gateway, and DynamoDB locally
 - *SAM Templates* are an extension of CloudFormation which provides simplified syntax
-- The `Transform` header SAM to transform a SAM template into a CloudFormation template
+- The `Transform` header is used to transform a SAM template into a CloudFormation template
 
 ## Templates
 
