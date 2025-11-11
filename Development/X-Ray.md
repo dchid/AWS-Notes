@@ -13,3 +13,4 @@
     - Elastic Beanstalk
     - API Gateway
 - X-ray integrates with EC2 and ECS using the X-Ray agent
+- Can assume cross account IAM roles to aggregate debug data across multiple accounts
