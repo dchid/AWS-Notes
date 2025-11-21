@@ -3,6 +3,8 @@
 - CloudFront is a global CDN with 216 edge locations for caching all around the world 
 - Uses Web Application Firewall for DDoS protection
 - Supports Geo Restriction
+- Supports signed URLs for private content using key pairs
+    - CloudFront key pairs can **only** be created by the root user
 
 ## Origins
 

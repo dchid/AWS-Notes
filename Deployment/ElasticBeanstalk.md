@@ -28,6 +28,7 @@
 - The service itself is free, but the resources provisioned are charged to the user
 - Elastic Beanstalk automatically handles load balancing, scaling, monitoring and configuration
 - When an RDS instance is linked to a beanstalk deployment, deleting the beanstalk app will delete the db as well
+- Advanced configuration files for an Elastic Beanstalk template are placed in an `.ebextensions/` folder
 
 ## Deployment Options for Updates
 
