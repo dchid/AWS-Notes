@@ -24,6 +24,7 @@
 - *QuickSight* is a serverless ML powered service for making interactive dashboards
 - *OpsWorks* is a configuration management service which provides managed instances id Chef and Puppet
 - *AWS AppSync** is a managed service for connected applications to GraphQL APIs
+- *AWS Serverless Application Repository (SAR)* is a managed repository for serverless applications
 
 ## AppConfig
 
