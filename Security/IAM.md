@@ -8,6 +8,7 @@
 - *IAM Users* can inherit permissions from *IAM Groups* when assigned to them
 - *IAM Policies* are JSON documents which define permissions
 - *IAM Roles* are sets of permissions defined by the IAM Policies attached them which can then be assumed by users
+- IAM policies can use variables as placeholders which are replaced with an actual value when the policy is evaluated
 - *IAM Credentials Report* is a report generated at an account level which summarized users and their credentials
 - *IAM Access Advisor* shows what permissions a user has and when they were last used
 - *IAM Access Analyzer* is used to find out which resources are shared internally and externally
