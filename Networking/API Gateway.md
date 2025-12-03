@@ -100,5 +100,13 @@
 - There are three ways to provide authentication on API gateway
     - IAM Roles
     - Cognito (for external users)
-    - Custom Auth
+    - Lambda Authorizer
 - API Gateway supports HTTPS with custom domains using ACM and Route 53
+
+### Lambda Authorizer
+
+- A *Lambda Authorizor* is a lambda function used to control access to an API Gateway
+- Was formerly known as a custom authorizer
+- There are two types of authorizers
+    - *Token-based* authorizers use bearer token auth strategies such OAuth and SAML
+    - *Request parameter-based* Authorizers receive caller identity from a combination of headers, query string parameters, and other variables
