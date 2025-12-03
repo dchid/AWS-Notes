@@ -7,6 +7,10 @@
 - Build instructions are configured in a YAML file called buildspec.yml
 - Output logs can be stored in either S3 or CloudWatch logs
 - EventBridge can be used to trigger actions on failed or canceled builds
+- Builds can be configured to timeout:
+    - min: 5 minutes
+    - max: 8 hours
+    - default: 8 hours
 - CodeBuild supports several environments:
     - Java
     - Ruby
