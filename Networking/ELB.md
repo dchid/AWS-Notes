@@ -64,6 +64,7 @@
 ## Cross Zone Load Balancing
 
 - Cross Zone Load Balancing distributes traffic evenly across all AZs
+- An individual ELB can only target EC2 instances within a single region.
 - If Cross Zone Load Balancing isn't used, the traffic is divided evenly among instances in AZ
 - LBs come with a TLS cert, but users can upload their own certs
 - Clients can us Server Name Indication (SNI) to specify the host name they reach
