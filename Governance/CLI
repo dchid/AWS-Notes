@@ -1,0 +1,19 @@
+# AWS CLI
+
+- AWS provides CLI for nearly every service
+
+## Flags
+
+- Most services offer the `--dry-run` flag for testing
+
+## Config
+
+- Multiple output types are available:
+	- Text
+	- Table
+	- JSON
+	- YAML
+- Output type can be controlled using:
+	- The config file
+	- The `AWS_DEFAULT_OUTPUT` environment varible
+	- The `--output` flag
