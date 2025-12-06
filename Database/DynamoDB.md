@@ -36,9 +36,10 @@
     - Number Set
     - Binary Set
 
-## Capacity modes
+## Throughput Capacity
 
-- There are multiple capacity modes
+- *Read Capacity Units (RCU)* represent 1 strongly consistent read per second or 2 eventually consistent reads per second for an item up to 4 kb in size
+- *Write Capacity Units (WCU)* represent 1 write per second for an item up to 1 kb in size
 
 ### Provisioned Mode
 
@@ -123,3 +124,8 @@
     - Full backups for long term retention until explicitly deleted
     - No effect of performance or latency
     - Can be configured and managed in AWS Backup (enables cross-region copy)
+
+## ACID
+
+- ACID stands for Atomicity, Consistency, Isolation, and Durability
+- Use `TransactWriteItems` and `TransactGetItems` APIs for all-or-nothing read/writes

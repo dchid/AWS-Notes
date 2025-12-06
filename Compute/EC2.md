@@ -38,7 +38,7 @@
   - can be attached to one instance at a time and can remap across instances
   - Elastic IPs only cost money when they aren't mapped to a server
   - 5 elastic IPs per account by default
-  - Avoid using Elastic IP is possible; use load balances in most cases
+  - Avoid using Elastic IP if possible; use load balancers in most cases
 - _EC2 Hibernate_ saves the instance's RAM to the root EBS volume (which must be encrypted)
   - Hibernate won't work for RAM amounts greater than 150 GB
   - Hibernation can't last longer than 60 days
@@ -74,14 +74,16 @@
 
 ## Cost
 
-- EC2 purchasing options:
-  - On Demand: Short workload, predictable, pay per second
-  - Reserved: 1-3 year lease, long workloads, flexible, offers none | partial | all upfront payments
-  - Savings Plans: 1-3 year lease, long workloads, commitment to huge amount of usage
-  - Spot Instances: Short workloads, cheap, can lose at any time, offer lowestPrice | diversified | capacityOptimized | capacityOptimized fleets.
-  - Dedicated Instances: No other customers share hardware
-  - Dedicated Hosts: Book entire physical server
-  - Capacity Reservations: Reserve capacity in specific AZ for any duration
+| Purchasing option | Typical workload / use‑case | Commitment length | Payment model |
+|-------------------|-----------------------------|--------------------|--------------|
+| **On‑Demand** | Short‑term, unpredictable workloads; development, testing, or burst traffic | None (pay as you go) | Pay‑per‑second (or per‑hour for older instance types) |
+| **Reserved Instances (RIs)** | Steady, long‑running workloads (e.g., databases, web servers) | 1 year or 3 years | Upfront payment options: • No upfront – lower monthly fee, higher total cost • Partial upfront – split payment • All upfront – biggest discount (up to ~75 % vs. On‑Demand) |
+| **Savings Plans** | Consistent usage across many instance families, OSes, or regions | 1 year or 3 years | Upfront payment options similar to RIs (no, partial, all) |
+| **Spot Instances** | Fault‑tolerant, flexible workloads (batch jobs, CI/CD, big data, stateless services) | None (use‑and‑lose) | Bidding against unused capacity; you pay the Spot price, usually far below On‑Demand |
+| **Dedicated Instances** | Workloads that require isolation at the hypervisor level but still want EC2‑managed scaling | None (pay‑as‑you‑go) | Same pricing model as On‑Demand or Reserved, plus a per‑region surcharge |
+| **Dedicated Hosts** | Need full control over the underlying physical server (e.g., for licensing or compliance) | None (pay‑as‑you‑go) or Reserved Host contracts | Hourly charge for the host + optional Reserved Host pricing for longer terms |
+| **Capacity Reservations** | Guarantee that you’ll have capacity when you need it (e.g., for scheduled events) | Any duration you specify | Charged at the same rate as the instance type you reserve (On‑Demand or Reserved pricing) |
+
 - Instances are only billed in running state except for reserve instances
 
 ## Placement Strategy
